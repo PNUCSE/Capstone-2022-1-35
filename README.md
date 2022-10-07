@@ -13,7 +13,7 @@
 
 ### 3. 시스템 구성도
 
-- 포스터 나오면 추가 예정
+![image](https://user-images.githubusercontent.com/26822105/194468042-e9545fa4-d5bc-410e-a858-cf4882ccdd99.png)
 
 ### 4. 소개 및 시연 영상
 
