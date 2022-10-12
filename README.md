@@ -13,7 +13,7 @@
 
 ### 3. 시스템 구성도
 
-![image](https://user-images.githubusercontent.com/26822105/194468042-e9545fa4-d5bc-410e-a858-cf4882ccdd99.png)
+![image](https://user-images.githubusercontent.com/26822105/195231874-6b4dc5d1-e2a9-4342-b147-0f26f62bf314.png)
 
 ### 4. 소개 및 시연 영상
 
