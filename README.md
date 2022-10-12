@@ -49,7 +49,7 @@ $ git clone https://github.com/whquddn55/Capstone-2022-2-35.git
 
 아래 명령어를 통해 블록체인 네트워크의 노드들을 설치합니다.
 ``` shell
-$ cd ./Capstone-2022-2-35
+$ cd ./Capstone-2022-2-35/BlockChain
 $ ./buildNetwork.sh up
 ```
 
