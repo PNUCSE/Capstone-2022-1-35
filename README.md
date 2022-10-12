@@ -58,13 +58,13 @@ $ ./buildNetwork.sh up
 $ ./deployCC.sh
 ```
 
-오류 또는 에러가 발생하는 경우 아래 명령어를 통해 네트워크를 다시 설치해야할 수 있습니다.
-``` shell
-$ ./buildNetwork.sh re
-```
-
 네트워크 세부 설정을 위해 네트워크를 중지해야할 때에는 아래 명령어를 통해 네트워크를 중지시킬 수 있습니다.
 
 ``` shell
 $ ./buildNetwork.sh down
+```
+
+오류 또는 에러가 발생하는 경우 아래 명령어를 통해 네트워크를 다시 설치할 수 있습니다. 해당 명령어는 down 명령어와 up 명령어를 순차적으로 실행합니다.
+``` shell
+$ ./buildNetwork.sh re
 ```
