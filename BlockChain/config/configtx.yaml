@@ -1,0 +1,391 @@
+################################################################################
+#
+#   Section: Organizations
+#
+#   - This section defines the different organizational identities which will
+#   be referenced later in the configuration.
+#
+################################################################################
+Organizations:
+    - &OrdererOrg
+        Name: OrdererOrg
+        ID: OrdererMSP
+        MSPDir: ../.build/organizations/ordererOrganizations/orderer.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('OrdererMSP.member')"
+            Writers:
+                Type: Signature
+                Rule: "OR('OrdererMSP.member')"
+            Admins:
+                Type: Signature
+                Rule: "OR('OrdererMSP.admin')"
+
+        OrdererEndpoints:
+            - orderer.aomd.com:9050
+
+    - &ReadOrg
+        Name: ReadOrgMSP
+        ID: ReadOrgMSP
+        MSPDir: ../.build/organizations/readOrganizations/readOrg.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('ReadOrgMSP.admin', 'ReadOrgMSP.peer', 'ReadOrgMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('ReadOrgMSP.admin', 'ReadOrgMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('ReadOrgMSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('ReadOrgMSP.peer')"
+
+    - &EducationOrg1
+        Name: EducationOrg1MSP
+        ID: EducationOrg1MSP
+        MSPDir: ../.build/organizations/educationOrganizations/educationOrg1.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('EducationOrg1MSP.admin', 'EducationOrg1MSP.peer', 'EducationOrg1MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('EducationOrg1MSP.admin', 'EducationOrg1MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('EducationOrg1MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('EducationOrg1MSP.peer')"
+
+    - &EducationOrg2
+        Name: EducationOrg2MSP
+        ID: EducationOrg2MSP
+        MSPDir: ../.build/organizations/educationOrganizations/educationOrg2.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('EducationOrg2MSP.admin', 'EducationOrg2MSP.peer', 'EducationOrg2MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('EducationOrg2MSP.admin', 'EducationOrg2MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('EducationOrg2MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('EducationOrg2MSP.peer')"
+
+
+    - &EducationOrg3
+        Name: EducationOrg3MSP
+        ID: EducationOrg3MSP
+        MSPDir: ../.build/organizations/educationOrganizations/educationOrg3.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('EducationOrg3MSP.admin', 'EducationOrg3MSP.peer', 'EducationOrg3MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('EducationOrg3MSP.admin', 'EducationOrg3MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('EducationOrg3MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('EducationOrg3MSP.peer')"
+
+    - &AwardOrg1
+        Name: AwardOrg1MSP
+        ID: AwardOrg1MSP
+        MSPDir: ../.build/organizations/awardOrganizations/awardOrg1.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('AwardOrg1MSP.admin', 'AwardOrg1MSP.peer', 'AwardOrg1MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('AwardOrg1MSP.admin', 'AwardOrg1MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('AwardOrg1MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('AwardOrg1MSP.peer')"
+
+    - &AwardOrg2
+        Name: AwardOrg2MSP
+        ID: AwardOrg2MSP
+        MSPDir: ../.build/organizations/awardOrganizations/awardOrg2.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('AwardOrg2MSP.admin', 'AwardOrg2MSP.peer', 'AwardOrg2MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('AwardOrg2MSP.admin', 'AwardOrg2MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('AwardOrg2MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('AwardOrg2MSP.peer')"
+
+    - &AwardOrg3
+        Name: AwardOrg3MSP
+        ID: AwardOrg3MSP
+        MSPDir: ../.build/organizations/awardOrganizations/awardOrg3.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('AwardOrg3MSP.admin', 'AwardOrg3MSP.peer', 'AwardOrg3MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('AwardOrg3MSP.admin', 'AwardOrg3MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('AwardOrg3MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('AwardOrg3MSP.peer')"
+
+    - &LicenseOrg1
+        Name: LicenseOrg1MSP
+        ID: LicenseOrg1MSP
+        MSPDir: ../.build/organizations/licenseOrganizations/licenseOrg1.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('LicenseOrg1MSP.admin', 'LicenseOrg1MSP.peer', 'LicenseOrg1MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('LicenseOrg1MSP.admin', 'LicenseOrg1MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('LicenseOrg1MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('LicenseOrg1MSP.peer')"
+
+    - &LicenseOrg2
+        Name: LicenseOrg2MSP
+        ID: LicenseOrg2MSP
+        MSPDir: ../.build/organizations/licenseOrganizations/licenseOrg2.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('LicenseOrg2MSP.admin', 'LicenseOrg2MSP.peer', 'LicenseOrg2MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('LicenseOrg2MSP.admin', 'LicenseOrg2MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('LicenseOrg2MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('LicenseOrg2MSP.peer')"
+
+    - &LicenseOrg3
+        Name: LicenseOrg3MSP
+        ID: LicenseOrg3MSP
+        MSPDir: ../.build/organizations/licenseOrganizations/licenseOrg3.aomd.com/msp
+
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('LicenseOrg3MSP.admin', 'LicenseOrg3MSP.peer', 'LicenseOrg3MSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('LicenseOrg3MSP.admin', 'LicenseOrg3MSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('LicenseOrg3MSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('LicenseOrg3MSP.peer')"
+
+Capabilities:
+    Channel: &ChannelCapabilities
+        V2_0: true
+
+    Orderer: &OrdererCapabilities
+        V2_0: true
+
+    Application: &ApplicationCapabilities
+        V2_0: true
+
+################################################################################
+#
+#   SECTION: Application
+#
+#   - This section defines the values to encode into a config transaction or
+#   genesis block for application related parameters
+#
+################################################################################
+Application: &ApplicationDefaults
+    Organizations:
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        LifecycleEndorsement:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Endorsement"
+        Endorsement:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Endorsement"
+
+    Capabilities:
+        <<: *ApplicationCapabilities
+
+Orderer: &OrdererDefaults
+    OrdererType: etcdraft
+    Addresses:
+        - orderer.aomd.com:9050
+    EtcdRaft:
+        Consenters:
+        - Host: orderer.aomd.com
+          Port: 9050
+          ClientTLSCert: ../.build/organizations/ordererOrganizations/orderer.aomd.com/orderers/orderer.aomd.com/tls/server.crt
+          ServerTLSCert: ../.build/organizations/ordererOrganizations/orderer.aomd.com/orderers/orderer.aomd.com/tls/server.crt
+
+    BatchTimeout: 2s
+
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+
+    Organizations:
+
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+        BlockValidation:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+
+################################################################################
+#
+#   CHANNEL
+#
+#   This section defines the values to encode into a config transaction or
+#   genesis block for channel related parameters.
+#
+################################################################################
+Channel: &ChannelDefaults
+    Policies:
+        Readers:
+            Type: ImplicitMeta
+            Rule: "ANY Readers"
+        Writers:
+            Type: ImplicitMeta
+            Rule: "ANY Writers"
+        Admins:
+            Type: ImplicitMeta
+            Rule: "MAJORITY Admins"
+
+    Capabilities:
+        <<: *ChannelCapabilities
+
+################################################################################
+#
+#   Profile
+#
+#   - Different configuration profiles may be encoded here to be specified
+#   as parameters to the configtxgen tool
+#
+################################################################################
+Profiles:
+    AOMD:
+      <<: *ChannelDefaults
+      Orderer: 
+        <<: *OrdererDefaults
+        Organizations:
+            - *OrdererOrg
+        Capabilities:
+            - *OrdererCapabilities
+      Consortiums:
+          EducationConsortium:
+              Organizations:
+                  - *ReadOrg
+                  - *EducationOrg1 
+                  - *EducationOrg2 
+                  - *EducationOrg3 
+          AwardConsortium:
+              Organizations:
+                  - *ReadOrg
+                  - *AwardOrg1
+                  - *AwardOrg2
+                  - *AwardOrg3
+          LicenseConsortium:
+              Organizations:
+                  - *ReadOrg
+                  - *LicenseOrg1
+                  - *LicenseOrg2
+                  - *LicenseOrg3
+
+    EducationChannel:
+        Consortium: EducationConsortium
+        <<: *ChannelDefaults
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *ReadOrg
+                - *EducationOrg1
+                - *EducationOrg2
+                - *EducationOrg3
+            Capabilities:
+                <<: *ApplicationCapabilities
+    
+    AwardChannel:
+        Consortium: AwardConsortium
+        <<: *ChannelDefaults
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *ReadOrg
+                - *AwardOrg1
+                - *AwardOrg2
+                - *AwardOrg3
+            Capabilities:
+                <<: *ApplicationCapabilities
+    
+    LicenseChannel:
+        Consortium: LicenseConsortium
+        <<: *ChannelDefaults
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *ReadOrg
+                - *LicenseOrg1
+                - *LicenseOrg2
+                - *LicenseOrg3
+            Capabilities:
+                <<: *ApplicationCapabilities

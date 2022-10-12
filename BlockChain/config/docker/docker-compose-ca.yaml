@@ -1,0 +1,101 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '3.5'
+
+networks:
+  fabric_network:
+    name: fabric_network
+
+services:
+  ca_educationOrg1:
+    image: hyperledger/fabric-ca:latest
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-educationOrg1
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_PORT=6055
+      - FABRIC_CA_SERVER_OPERATIONS_LISTENADDRESS=0.0.0.0:16055
+    ports:
+      - "6055:6055"
+      - "16055:16055"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ../../.build/organizations/fabric-ca/ca-educationOrg1:/etc/hyperledger/fabric-ca-server
+    container_name: ca_educationOrg1
+    networks:
+      - fabric_network
+
+  ca_awardOrg1:
+    image: hyperledger/fabric-ca:latest
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-awardOrg1
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_PORT=7055
+      - FABRIC_CA_SERVER_OPERATIONS_LISTENADDRESS=0.0.0.0:17055
+    ports:
+      - "7055:7055"
+      - "17055:17055"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ../../.build/organizations/fabric-ca/ca-awardOrg1:/etc/hyperledger/fabric-ca-server
+    container_name: ca_awardOrg1
+    networks:
+      - fabric_network
+
+  ca_licenseOrg1:
+    image: hyperledger/fabric-ca:latest
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-licenseOrg1
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_PORT=8055
+      - FABRIC_CA_SERVER_OPERATIONS_LISTENADDRESS=0.0.0.0:18055
+    ports:
+      - "8055:8055"
+      - "18055:18055"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ../../.build/organizations/fabric-ca/ca-licenseOrg1:/etc/hyperledger/fabric-ca-server
+    container_name: ca_licenseOrg1
+    networks:
+      - fabric_network
+
+  ca_readOrg:
+    image: hyperledger/fabric-ca:latest
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-readOrg
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_PORT=5055
+      - FABRIC_CA_SERVER_OPERATIONS_LISTENADDRESS=0.0.0.0:15055
+    ports:
+      - "5055:5055"
+      - "15055:15055"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ../../.build/organizations/fabric-ca/ca-readOrg:/etc/hyperledger/fabric-ca-server
+    container_name: ca_readOrg
+    networks:
+      - fabric_network
+
+  ca_ordererOrg:
+    image: hyperledger/fabric-ca:latest
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-ordererOrg
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_PORT=9055
+      - FABRIC_CA_SERVER_OPERATIONS_LISTENADDRESS=0.0.0.0:19055
+    ports:
+      - "9055:9055"
+      - "19055:19055"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ../../.build/organizations/fabric-ca/ca-ordererOrg:/etc/hyperledger/fabric-ca-server
+    container_name: ca_ordererOrg
+    networks:
+      - fabric_network
