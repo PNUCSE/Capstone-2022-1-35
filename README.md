@@ -50,7 +50,54 @@ $ npm run start
 ```
 
 ### 백엔드(SpringBoot, CICD)
-- 하하하
+
+
+#### 0. Dependencies
+|Name|Version|
+|----|-------:|
+|OS|Ubuntu 20.04.5 LTS|
+|Java|OpenJDK 11.0.15|
+|Springboot|2.7.1|
+|Docker|20.10.18|
+|kubernetes|1.23.6-k3s|
+|Nginx|1.21.1|
+|MySQL|5.7|
+
+#### 1. Clone project
+``` shell
+$ git clone https://github.com/JO2SEO/AOMD-Server
+```
+
+```shell
+$ git checkout dev
+```
+
+```shell
+$ git checkout -b feat-...
+```
+
+#### 2. Pull Request from dev to main branch
+> git flow 를 활용해 main 브랜치가 아닌 곳에 본인의 코드를 커밋 및 푸시합니다.
+
+#### 3. merge to main brach
+
+> CI/CD pipeline operate
+
+<img width="697" alt="image" src="https://user-images.githubusercontent.com/68914294/195872032-d67b8825-1284-4b53-b75d-0cb06691322f.png">
+
+1. github action CI process start
+2. gradle test, gradle build, create docker image, push docker image to dockerhub
+3. automatically argo-deploy branch tag modify
+4. argoCD check difference, sync state
+
+#### 4. Check your argoCD
+
+![image](https://user-images.githubusercontent.com/68914294/195873514-ea94278c-e465-48bf-bf5b-3175342c696f.png)
+
+#### 5. precaution
+> git submodule 을 활용해 secret 정보를 관리한다.
+> kubernetes secret 을 활용해 secret 정보를 관리한다.
+
 
 ### 블록체인(HyperledgerFabric)
 
