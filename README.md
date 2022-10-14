@@ -31,6 +31,7 @@
 ## 5. 설치 및 사용법
 
 ### 프론트(리액트)
+---
 플랫폼의 프론트엔드 사이드는 프레임워크인 React를 기반으로 설계되었습니다.
 
 #### 1. Clone Project
@@ -50,8 +51,7 @@ $ npm run start
 ```
 
 ### 백엔드(SpringBoot, CICD)
-
-
+---
 #### 0. Dependencies
 |Name|Version|
 |----|-------:|
@@ -112,7 +112,7 @@ $ java -jar ./aomd-server.jar
 
 
 ### 블록체인(HyperledgerFabric)
-
+---
 #### 0. Dependencies
 |Name|Version|
 |----|-------:|
