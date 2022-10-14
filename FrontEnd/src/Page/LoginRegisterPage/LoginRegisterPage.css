@@ -1,0 +1,64 @@
+/* div */
+.LoginPageDiv {
+	height: 100%;
+	width: 100%;
+	box-sizing: content-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.LoginPageForm {
+	position: relative;
+	background: #f2f6fa;
+	z-index: 1;
+	max-width: 270px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	box-sizing: content-box;
+}
+
+.LoginFormInput {
+	font-family: 'Roboto', sans-serif;
+	outline: 0;
+	background: #d5dbe6;
+	width: 100%;
+	border: none;
+	border-radius: 30px;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 12px;
+}
+.LoginFormInput:hover {
+	background: #bdc0c7;
+}
+
+/* button */
+.FormButton {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #203864;
+	border-radius: 30px;
+
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: white;
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+
+.FormButton:hover {
+	background: #6c7c97;
+	font-weight: bolder;
+}
+.FormButton:focus {
+	background: gray;
+	color: black;
+	font-weight: bolder;
+}

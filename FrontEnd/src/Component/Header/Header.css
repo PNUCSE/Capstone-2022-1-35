@@ -1,0 +1,118 @@
+.HeaderContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding-top: 10px;
+	position: fixed;
+	z-index: 100;
+	/* background-color: white; */
+}
+.LeftBox {
+	width: 30%;
+	display: flex;
+	align-items: center;
+	padding-left: 14vw;
+}
+.LeftBox p {
+	display: flex;
+	font-size: 16px;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 30px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.LeftBox p:hover {
+	background: #dfdfdf;
+}
+
+.RightBox {
+	display: flex;
+	width: 30%;
+	justify-content: flex-start;
+}
+.MoveHomeBtn {
+	width: 35%;
+	/* background: white; */
+	background-color: transparent;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.ToggleMenuBox {
+	width: 30px;
+	margin: 0px 0px 0px 20px;
+	justify-content: center;
+	display: flex;
+	z-index: 5;
+	flex-direction: column;
+	box-sizing: content-box;
+}
+
+.OnToggleList {
+	position: absolute;
+	flex-direction: row;
+	left: 0;
+	top: 50px;
+	z-index: 7;
+	padding: 30px 10px 20px 10px;
+	margin-top: 30px;
+
+	width: 100vw;
+	height: 170px;
+	background-color: white;
+	border-bottom: black 3px solid;
+	justify-content: space-around;
+}
+
+.OnToggleList div {
+	display: flex;
+	flex-direction: column;
+	width: 230px;
+	padding-left: 5%;
+	z-index: 7;
+}
+
+.OnToggleList h1 {
+	margin-bottom: 10px;
+	font-size: 17px;
+	font-weight: bolder;
+	z-index: 7;
+}
+
+.OnToggleList ul {
+	display: flex;
+	flex-direction: column;
+	z-index: 7;
+}
+
+.OnToggleList li {
+	width: 170px;
+	text-align: left;
+	margin-top: 10px;
+	font-size: 15px;
+	cursor: pointer;
+	z-index: 7;
+}
+
+.HBGToggleBtn {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background: white; */
+	background-color: transparent;
+
+	border: none;
+	z-index: 7;
+	cursor: pointer;
+}
+
+.HBGToggleBtn img {
+	width: 50%;
+}
