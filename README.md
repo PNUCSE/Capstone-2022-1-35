@@ -14,11 +14,11 @@
 
 ## 2. 팀소개
 
-|이름|깃허브|이메일|역할|
-|---|---|---|------|
-|조병우|https://github.com/whquddn55|whquddn55@gmail.com|블록체인(HyperledgerFabric) 개발|
-|조현우|https://github.com/hyun98|hyun0404woo@gmail.com|백엔드(SpringBoot, CI/CD) 개발|
-|서지원|https://github.com/jwseo4074|zwon2056@gmail.com|프론트(React) 개발|
+|이름|이메일|역할|
+|---|---|------|
+|[조병우](https://github.com/whquddn55)|whqdudn55@gmail.com|블록체인(HyperledgerFabric) 개발|
+|[조현우](https://github.com/hyun98)|hyun0404woo@gmail.com|백엔드(SpringBoot, CI/CD) 개발|
+|[서지원](https://github.com/jwseo4074)|zwon2056@gmail.com|프론트(React) 개발|
 
 ## 3. 시스템 구성도
 
