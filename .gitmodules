@@ -1,0 +1,3 @@
+[submodule "BackEnd"]
+	path = BackEnd
+	url = https://github.com/JO2SEO/AOMD-Server.git
