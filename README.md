@@ -33,18 +33,18 @@
 ### 프론트(리액트)
 플랫폼의 프론트엔드 사이드는 프레임워크인 React를 기반으로 설계되었습니다.
 
-아래 명령어를 통해 해당 프로젝트를 로컬에 내려받습니다.
+#### 1. Clone Project
 ``` shell
 $ git clone https://github.com/whquddn55/Capstone-2022-2-35.git
 $ cd /Capstone-2022-2-35/FrontEnd
 ```
 
-아래 명령어를 통해 해당 프로젝트에 필요한 package.json 에 포함된 의존성 패키지들을 일괄적으로 설치합니다.
+#### 2. Install dependencies in package.json
 ``` shell
 $ npm install
 ```
 
-아래의 명령어를 통해 package.json의 scripts에 있는 start 명령어를 실행합니다.
+#### 3. Run Project
 ``` shell
 $ npm run start
 ```
@@ -54,8 +54,7 @@ $ npm run start
 
 ### 블록체인(HyperledgerFabric)
 
-프로젝트 실행전 HyperledgerFabric 개발환경 세팅을 완료해야합니다.
-환경설정을 위한 버전 정보는 아래와 같습니다.
+#### 0. Dependencies
 |Name|Version|
 |----|-------:|
 |OS|Ubuntu 20.04.5 LTS|
@@ -67,29 +66,25 @@ $ npm run start
 |Docker|20.10.18|
 |jq|1.6|
 
-아래 명령어를 통해 해당 프로젝트를 로컬에 내려받습니다.
+#### 1. Clone project
 ``` shell
 $ git clone https://github.com/whquddn55/Capstone-2022-2-35.git
 $ cd ./Capstone-2022-2-35/BlockChain
 ```
-
-아래 명령어를 통해 블록체인 네트워크의 노드들을 설치합니다.
+#### 2. Set up blockchain network's nodes
 ``` shell
 $ ./buildNetwork.sh up
 ```
-
-아래 명령어를 통해 체인코드를 컴파일하고 설치된 노드들에 체인코드를 발급합니다.
+#### 3. Compile chaincode and publish chiancodes to installed nodes
 ``` shell
 $ ./deployCC.sh
 ```
 
-네트워크 세부 설정을 위해 네트워크를 중지해야할 때에는 아래 명령어를 통해 네트워크를 중지시킬 수 있습니다.
-
+#### 4. Stop network
 ``` shell
 $ ./buildNetwork.sh down
 ```
-
-오류 또는 에러가 발생하는 경우 아래 명령어를 통해 네트워크를 다시 설치할 수 있습니다. 해당 명령어는 down 명령어와 up 명령어를 순차적으로 실행합니다.
+#### 5. Stop network and Set up network in sequence
 ``` shell
 $ ./buildNetwork.sh re
 ```
