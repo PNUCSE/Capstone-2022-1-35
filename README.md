@@ -80,11 +80,11 @@ $ ./buildNetwork.sh up
 $ ./deployCC.sh
 ```
 
-#### 4. Stop network
+#### 4. Stop network when re-configuration network
 ``` shell
 $ ./buildNetwork.sh down
 ```
-#### 5. Stop network and Set up network in sequence
+#### 5. Stop network and Set up network in sequence when some error occurs
 ``` shell
 $ ./buildNetwork.sh re
 ```
