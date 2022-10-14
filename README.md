@@ -36,7 +36,7 @@
 #### 1. Clone Project
 ``` shell
 $ git clone https://github.com/whquddn55/Capstone-2022-2-35.git
-$ cd /Capstone-2022-2-35/FrontEnd
+$ cd ./Capstone-2022-2-35/FrontEnd
 ```
 
 #### 2. Install dependencies in package.json
