@@ -79,6 +79,18 @@ $ git checkout -b feat-...
 #### 2. Pull Request from dev to main branch
 > git flow 를 활용해 main 브랜치가 아닌 곳에 본인의 코드를 커밋 및 푸시합니다.
 
+```shell
+$ cd ./AOMD-Server
+$ ./gradlew clean build
+$ cd ./services/portfolio/build/libs
+```
+
+> **Run your Database**
+
+```shell
+$ java -jar ./aomd-server.jar
+```
+
 #### 3. merge to main brach
 
 > CI/CD pipeline operate
