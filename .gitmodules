@@ -1,3 +1,9 @@
 [submodule "BackEnd"]
 	path = BackEnd
 	url = https://github.com/JO2SEO/AOMD-Server.git
+[submodule "BlockChain"]
+	path = BlockChain
+	url = https://github.com/JO2SEO/AOMD-HyperLedger.git
+[submodule "FrontEnd"]
+	path = FrontEnd
+	url = https://github.com/JO2SEO/AOMD-Client.git
