@@ -36,7 +36,7 @@
 
 #### 1. Clone Project
 ``` shell
-$ git clone https://github.com/whquddn55/Capstone-2022-2-35.git
+$ git clone https://github.com/whquddn55/Capstone-2022-1-35.git
 $ cd ./Capstone-2022-2-35/FrontEnd
 ```
 
@@ -65,7 +65,7 @@ $ npm run start
 
 #### 1. Clone project
 ``` shell
-$ git clone https://github.com/JO2SEO/AOMD-Server
+$ git clone https://github.com/whquddn55/Capstone-2022-1-35
 ```
 
 ```shell
@@ -127,7 +127,7 @@ $ java -jar ./aomd-server.jar
 
 #### 1. Clone project
 ``` shell
-$ git clone https://github.com/whquddn55/Capstone-2022-2-35.git
+$ git clone https://github.com/whquddn55/Capstone-2022-1-35.git
 $ cd ./Capstone-2022-2-35/BlockChain
 ```
 #### 2. Set up blockchain network's nodes
