@@ -25,8 +25,7 @@
 ![image](https://user-images.githubusercontent.com/26822105/195231874-6b4dc5d1-e2a9-4342-b147-0f26f62bf314.png)
 
 ## 4. 소개 및 시연 영상
-
-- 10/26까지 학과 계정으로 링크 나오면 업로드
+[![35조 발표](http://img.youtube.com/vi/zWiVFvmuC-w/0.jpg)](https://www.youtube.com/watch?v=zWiVFvmuC-w)
 
 ## 5. 설치 및 사용법
 
